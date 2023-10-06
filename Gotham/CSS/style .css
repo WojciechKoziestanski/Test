@@ -1,0 +1,274 @@
+/*========css reset======*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*===============main-styles=========*/
+@font-face{
+	font-family: Roboto;
+	src: url('../fonts/Roboto/Roboto-Regular.woff') format('woff'),
+		 url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+@font-face{
+	font-family: Proxima;
+    src: url('../fonts/proxima nova/ProximaNova-Light.woff') format('woff'),
+         url('../fonts/proxima nova/ProximaNova-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face{
+    font-family: 'Proxima';
+    src: url('../fonts/proxima nova/ProximaNova-Regular.woff') format('woff'),
+         url('../fonts/proxima nova/ProximaNova-Regular.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'Proxima';
+	src: url('../fonts/proxima nova/ProximaNova-Bold.woff') format('woff'),
+         url('../fonts/proxima nova/ProximaNova-Bold.ttf') format('truetype');
+     font-weight: bold;
+}
+@font-face{
+	font-family: Roboto;
+	src: url('../fonts/Roboto/Roboto-Light.woff') format('woff'),
+		 url('../fonts/Roboto/Roboto-Light.ttf') format('truetype');
+	font-weight: 300;
+}
+body{
+	font-style: 16px;
+	font-family: Roboto;
+}
+/*===============header==============*/
+
+.page-header, .page-footer{
+	height: 67px;
+	width: 100%;
+	background-color: #f7c61d;
+}	
+.wrapper{
+	width: 1170px;
+	height: 100%;
+	margin: 0 auto;
+}
+.page-header .wrapper, .page-footer .wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+nav ul{
+	display: flex;
+}
+
+.page-header nav a{
+	font-family: Proxima;
+	color: #000;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 35px;
+
+}
+/*===============main==============*/
+h2{
+	font-family: Proxima;
+	font-weight: bold;
+	font-size: 24px;
+	margin: 44px 0px 18px; 
+}
+article h3{
+	font-family: Proxima;
+	font-weight: 300;
+	font-size: 30px;
+}
+.main>.wrapper{
+	display: flex;
+}
+main{
+	width: 77%;
+}
+.right-sidebar{
+	width: 23%;
+}
+article {
+	display: flex;
+	margin-bottom: 40px;
+}
+img {
+	width: 100%;
+}
+.article-left {
+	width: 30%;
+}
+.article-right {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	padding-left:25px;
+	justify-content: space-between;
+}
+.meta {
+	font-family: Roboto;
+	font-weight: 300;
+	color: #999;
+	font-size: 13px;
+}
+.meta span::after{
+	display: inline-block;
+	content: "|";
+	color: #999;
+	font-size: 13px;
+}
+.meta span:last-child::after{
+	display: none;
+}
+.category{
+	color: #e3b002;
+}
+.description {
+	color: #555;
+	font-size: 16px;
+	font-family: Roboto;
+}
+.views::before, .comments::before{
+	content: '\f06e';
+	font-family: 'Font Awesome 5 Free';
+	font-size: 16px;
+	margin-right: 10px;
+}
+.views::after{
+	content: "|";
+	margin: 0 10px;
+}
+.comments::before{
+	content: '\f075';
+	color: #999;
+}
+.comments{
+	color: #e3b002;
+}
+.additional{
+	color: #999;
+	font-family: Roboto;
+	font-weight: 300;
+}
+.more{
+	width: 170px;
+	height: 42px;
+	background: transparent;
+	color: #000;
+	font-family: Roboto;
+	font-size: 12px;
+	text-transform: uppercase;
+	border: 1px solid #e3b002;
+	border-radius: 5px;
+	outline: none;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+.description::after{
+	content: '>';
+	color: #e3b002;
+}
+/*===============aside==============*/
+aside.right-sidebar{
+	padding-top: 78px;
+	padding-left: 68px;
+}
+.search-box{
+	width: 100%;
+	position: relative;
+}
+.search-box label{
+	position: absolute;
+	left: 10px;
+	top: 8px;
+	z-index: 100;
+}
+.search-box input{
+	width: 100%;
+	border-radius: 10px;
+	padding: 8px 10px 8px 30px;
+	border: 1px solid #e5e5e5;
+	font-family: Roboto;
+	font-size: 14px;
+}
+
+
+/*===============footer==============*/
+.page-footer>.wrapper>*{
+	width: 33.33%;
+}
+.page-footer{
+	margin-top: 81px;
+}
+
+.socials{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.socials a{
+	display: block;
+	width: 45px;
+	height: 45px;
+	background-color: #fff;
+	border-radius: 50%;
+	color: #f7c61d;
+	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	margin-left: 10px;
+}
+
+.copy{
+	font-family: Proxima;
+	font-weight: 300;
+	font-size: 13px;
+	color: #a78613;
+}
+
+.footer-nav a {
+	text-decoration: none;
+	color: #000;
+	padding: 0 18px;
+}
